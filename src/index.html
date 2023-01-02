@@ -1,0 +1,26 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="./index.js"></script>
+        <link rel="stylesheet" href="./index.css">
+        <title>rckymntn's grocery formatter</title>
+    </head>
+
+    <body>
+        <h1>rckymntn's grocery formatter</h1>
+        <p>Instructions</p>
+        <label for="delimiterSelect">Select group delimiter:</label>
+        <select id="delimiterSelect" name="delimiterSelect">
+            <option value="###">### GROUP ###</option>
+            <option value="~~~">~~~ GROUP ~~~</option>
+            <option value="...">... GROUP ...</option>
+        </select>
+        <br>
+        <textarea id="inputTextArea" name="inputTextArea"></textarea>
+        <button id="sortButton">Sort</button>
+        <textarea readonly id="outputTextArea" name="outputTextArea"></textarea>
+        <button id="copyButton">Copy</button>
+        <button id="clearButton">Clear</button>
+        <p><a href="https://github.com/rckymntn/grocery-formatter">Source</a></p>
+    </body>
+</html>
