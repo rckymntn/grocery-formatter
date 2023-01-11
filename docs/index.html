@@ -7,9 +7,9 @@
     </head>
 
     <body>
-        <h1>rckymntn's grocery formatter</h1>
-        <p>Instructions</p>
-        <label for="delimiterSelect">Select group delimiter:</label>
+        <h1 id="header">rckymntn's grocery formatter</h1>
+        <p id="instructions">Paste your unsorted grocery list into the input, optionally select a different delimiter for groups, and click sort. Then you can copy your organized grocery list or clear the input to try again.</p>
+        <label id="delimiterSelectLabel" for="delimiterSelect">Select group delimiter:</label>
         <select id="delimiterSelect" name="delimiterSelect">
             <option value="###">### GROUP ###</option>
             <option value="~~~">~~~ GROUP ~~~</option>
@@ -21,6 +21,6 @@
         <textarea readonly id="outputTextArea" name="outputTextArea"></textarea>
         <button id="copyButton">Copy</button>
         <button id="clearButton">Clear</button>
-        <p><a href="https://github.com/rckymntn/grocery-formatter">Source</a></p>
+        <p id="footer">&copy; rckymntn 2023 | <a href="https://github.com/rckymntn/grocery-formatter">Source</a></p>
     </body>
 </html>
