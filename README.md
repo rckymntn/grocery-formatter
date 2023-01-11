@@ -2,7 +2,9 @@
 
 A simple webpage that groups an unsorted list of groceries into their departments. Does this exist already? Certainly, but I didn't look because I wanted to build my own tailored to how I would like things grouped. 
 
-The bulk of this was written in a couple hours before a grocery shopping trip as a proof of concept to myself. This is very bare bones right now with plenty that could be done. 
+The bulk of this was written in a couple hours before a grocery shopping trip as a proof of concept to myself. This is very bare bones right now with plenty more that could be done.
+
+![example of grocery formatter](docs/example.png)
 
 ### Usage
 
