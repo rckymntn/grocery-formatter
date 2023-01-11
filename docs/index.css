@@ -1,8 +1,18 @@
-body {
-    position: absolute;
+#header {
+    text-align: center;
+}
+
+#instructions {
+    text-align: center;
+}
+
+#delimiterSelect, #delimiterSelectLabel {
+    display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: auto;
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 
 textarea {
@@ -10,11 +20,45 @@ textarea {
 }
 
 #inputTextArea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     height: 25vh;
     width: 50vw;
 }
 
 #outputTextArea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     height: 25vh;
     width: 50vw;
+}
+
+#sortButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+#copyButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+#clearButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+#footer {
+    text-align: center;
 }
