@@ -35,28 +35,34 @@ textarea {
     width: 50vw;
 }
 
+.buttonDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #sortButton {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display: inline-block;
     margin-top: 1vh;
     margin-bottom: 1vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
 }
 
 #copyButton {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display: inline-block;
     margin-top: 1vh;
     margin-bottom: 1vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
 }
 
 #clearButton {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display: inline-block;
     margin-top: 1vh;
     margin-bottom: 1vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
 }
 
 #footer {
