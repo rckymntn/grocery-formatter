@@ -15,8 +15,7 @@ The bulk of this was written in a couple hours before a grocery shopping trip as
 
 ### To do
 
-- Organize groceries into maps to use `.has()` rather than arrays using `.includes()` for better performance. 
-    - Alternatively: Use a readonly sqlite database. 
+- ~~Organize groceries into maps to use `.has()` rather than arrays using `.includes()` for better performance.~~ Done.
 - Find an existing dataset of groceries by department.
 - ~~Give some love to the frontend to make the webpage more visually appealing.~~ Done for now with plain and simple vanilla CSS. 
 
