@@ -58,33 +58,37 @@ group = (text) => {
     for (item of textArray) {
         trimmedItem = item.trim();
         trimmedItemToLower = trimmedItem.toLowerCase();
-        if (produce.includes(trimmedItemToLower)) {
-            groups.produce += `\n${trimmedItem}`;
-        } else if (toiletries.includes(trimmedItemToLower)) {
-            groups.toiletries += `\n${trimmedItem}`;
-        } else {
-            groups.misc += `\n${trimmedItem}`;
+        switch (temp.get(trimmedItemToLower)) {
+            case(1):
+                groups.produce += `\n${trimmedItem}`;
+                break;
+            case(2):
+                groups.toiletries += `\n${trimmedItem}`;
+                break;
+            default:
+                groups.misc += `\n${trimmedItem}`;
+                break;
         }
     }
     let grouped = groups.produce + "\n\n" + groups.toiletries + "\n\n" + groups.misc;
     return grouped;
 }
 
-const produce = [
-    "apples",
-    "apple",
-    "bananas",
-    "banana",
-    "avacados",
-    "avacado",
-    "potatoes",
-    "potato",
-]
+const temp = new Map([
+    // Produce
+    ["apple", 1],
+    ["apples", 1],
+    ["banana", 1],
+    ["bananas", 1],
+    ["avacado", 1],
+    ["avacados", 1],
+    ["potato", 1],
+    ["potatoes", 1],
 
-const toiletries = [
-    "shampoo",
-    "conditioner",
-    "soap",
-    "body wash",
-    "toothpaste",
-]
+    // Toiletries
+    ["shampoo", 2],
+    ["conditioner", 2],
+    ["soap", 2],
+    ["body wash", 2],
+    ["toothpaste", 2],
+])
