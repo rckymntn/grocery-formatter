@@ -5,12 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "minify": "minify src/index.js > docs/index.min.js"
+    "minify": "uglifyjs src/index.js > docs/index.min.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "minify": "^9.1.0"
-  }
+  "license": "ISC"
 }
