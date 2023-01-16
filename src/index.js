@@ -1,3 +1,6 @@
+const PRODUCE = 1;
+const TOILETRIES = 2;
+
 let delimiter = "###";
 
 window.onload = () => {
@@ -58,11 +61,11 @@ group = (text) => {
     for (item of textArray) {
         trimmedItem = item.trim();
         trimmedItemToLower = trimmedItem.toLowerCase();
-        switch (temp.get(trimmedItemToLower)) {
-            case(1):
+        switch (items.get(trimmedItemToLower)) {
+            case(PRODUCE):
                 groups.produce += `\n${trimmedItem}`;
                 break;
-            case(2):
+            case(TOILETRIES):
                 groups.toiletries += `\n${trimmedItem}`;
                 break;
             default:
@@ -74,21 +77,21 @@ group = (text) => {
     return grouped;
 }
 
-const temp = new Map([
+const items = new Map([
     // Produce
-    ["apple", 1],
-    ["apples", 1],
-    ["banana", 1],
-    ["bananas", 1],
-    ["avacado", 1],
-    ["avacados", 1],
-    ["potato", 1],
-    ["potatoes", 1],
+    ["apple", PRODUCE],
+    ["apples", PRODUCE],
+    ["banana", PRODUCE],
+    ["bananas", PRODUCE],
+    ["avacado", PRODUCE],
+    ["avacados", PRODUCE],
+    ["potato", PRODUCE],
+    ["potatoes", PRODUCE],
 
     // Toiletries
-    ["shampoo", 2],
-    ["conditioner", 2],
-    ["soap", 2],
-    ["body wash", 2],
-    ["toothpaste", 2],
+    ["shampoo", TOILETRIES],
+    ["conditioner", TOILETRIES],
+    ["soap", TOILETRIES],
+    ["body wash", TOILETRIES],
+    ["toothpaste", TOILETRIES],
 ])
