@@ -1,5 +1,6 @@
 const PRODUCE = 1;
 const TOILETRIES = 2;
+const COOKING = 3;
 
 let delimiter = "###";
 
@@ -55,6 +56,7 @@ group = (text) => {
     let groups = {
         produce: `${delimiter} PRODUCE ${delimiter}`,
         toiletries: `${delimiter} TOILETRIES ${delimiter}`,
+        cooking: `${delimiter} COOKING ${delimiter}`,
         misc: `${delimiter} MISC ${delimiter}`
     };
     let textArray = text.split(/[\n,]/);
@@ -68,6 +70,8 @@ group = (text) => {
             case(TOILETRIES):
                 groups.toiletries += `\n${trimmedItem}`;
                 break;
+            case(COOKING):
+                groups.cooking += `\n${trimmedItem}`;
             default:
                 groups.misc += `\n${trimmedItem}`;
                 break;
@@ -87,6 +91,14 @@ const items = new Map([
     ["avacados", PRODUCE],
     ["potato", PRODUCE],
     ["potatoes", PRODUCE],
+    ["cucumber", PRODUCE],
+    ["cucumbers", PRODUCE],
+    ["tomato", PRODUCE],
+    ["tomatoes", PRODUCE],
+    ["carrot", PRODUCE],
+    ["carrots", PRODUCE],
+    ["kale", PRODUCE],
+    ["spinach", PRODUCE],
 
     // Toiletries
     ["shampoo", TOILETRIES],
@@ -94,4 +106,12 @@ const items = new Map([
     ["soap", TOILETRIES],
     ["body wash", TOILETRIES],
     ["toothpaste", TOILETRIES],
+
+    // Cooking
+    ["flour", COOKING],
+    ["olive oil", COOKING],
+    ["vinegar", COOKING],
+    ["white vinegar", COOKING],
+    ["apple cider vinegar", COOKING],
+    ["rice wine vinegar", COOKING],
 ])
