@@ -1,6 +1,12 @@
 const PRODUCE = 1;
 const TOILETRIES = 2;
 const COOKING = 3;
+const MEAT = 4;
+const DAIRY = 5;
+const CANNED = 6;
+const BAKERY = 7;
+const BEVERAGE = 8;
+const FROZEN = 9;
 
 let delimiter = "###";
 
@@ -57,6 +63,12 @@ group = (text) => {
         produce: `${delimiter} PRODUCE ${delimiter}`,
         toiletries: `${delimiter} TOILETRIES ${delimiter}`,
         cooking: `${delimiter} COOKING ${delimiter}`,
+        meat: `${delimiter} MEAT ${delimiter}`,
+        dairy: `${delimiter} DAIRY ${delimiter}`,
+        canned: `${delimiter} CANNED ${delimiter}`,
+        bakery: `${delimiter} BAKERY ${delimiter}`,
+        beverage: `${delimiter} BEVERAGE ${delimiter}`,
+        frozen: `${delimiter} FROZEN ${delimiter}`,
         misc: `${delimiter} MISC ${delimiter}`
     };
     let textArray = text.split(/[\n,]/);
@@ -72,12 +84,31 @@ group = (text) => {
                 break;
             case(COOKING):
                 groups.cooking += `\n${trimmedItem}`;
+                break;
+            case(MEAT):
+                groups.meat += `\n${trimmedItem}`;
+                break;
+            case(DAIRY):
+                groups.dairy += `\n${trimmedItem}`;
+                break;
+            case(CANNED):
+                groups.canned += `\n${trimmedItem}`;
+                break;
+            case(BAKERY):
+                groups.bakery += `\n${trimmedItem}`;
+                break;
+            case(BEVERAGE):
+                groups.beverage += `\n${trimmedItem}`;
+                break;
+            case(FROZEN):
+                groups.frozen += `\n${trimmedItem}`;
+                break;
             default:
                 groups.misc += `\n${trimmedItem}`;
                 break;
         }
     }
-    let grouped = groups.produce + "\n\n" + groups.toiletries + "\n\n" + groups.misc;
+    let grouped = groups.produce + "\n\n" + groups.toiletries + "\n\n" + groups.cooking + "\n\n" + groups.meat + "\n\n" + groups.dairy + "\n\n" + groups.canned + "\n\n" + groups.bakery + "\n\n" + groups.beverage + "\n\n" + groups.frozen + "\n\n" + groups.misc;
     return grouped;
 }
 
@@ -114,4 +145,38 @@ const items = new Map([
     ["white vinegar", COOKING],
     ["apple cider vinegar", COOKING],
     ["rice wine vinegar", COOKING],
+
+    // Meat
+    ["beef", MEAT],
+    ["ground beef", MEAT],
+    ["steak", MEAT],
+    ["steaks", MEAT],
+    ["sausage", MEAT],
+    ["sausages", MEAT],
+    ["chicken", MEAT],
+
+    // Dairy
+    ["milk", DAIRY],
+    ["cream", DAIRY],
+    ["egg", DAIRY],
+    ["eggs", DAIRY],
+
+    // Canned 
+    ["canned beans", CANNED],
+    ["canned fruit", CANNED],
+    ["canned fruits", CANNED],
+    ["canned vegetables", CANNED],
+
+    // Bakery
+    ["bread", BAKERY],
+
+    // Beverage
+    ["coffee", BEVERAGE],
+    ["tea", BEVERAGE],
+
+    // Frozen 
+    ["frozen beans", CANNED],
+    ["frozen fruit", CANNED],
+    ["frozen fruits", CANNED],
+    ["frozen vegetables", CANNED],
 ])
